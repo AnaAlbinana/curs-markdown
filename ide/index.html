@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Entornos de desarrollo - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../analisis/" class="nav-link">Análisis del problema. Buscando una solución</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../disenyo/" class="nav-link">Diseño</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../explotacion/" class="nav-link">Explotación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Entornos de desarrollo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../implementacion/" class="nav-link">Implementación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../introduccion/" class="nav-link">1. Introducción</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ordenes/" class="nav-link">Tipo de órdenes que acepta un ordenador</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../paradigmas/" class="nav-link">Paradigmas de la programación</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../programas/" class="nav-link">Programas y programación</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../explotacion/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../implementacion/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#entornos-de-desarrollo" class="nav-link">Entornos de desarrollo</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#jdk" class="nav-link">JDK</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#eclipse" class="nav-link">Eclipse</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="entornos-de-desarrollo">Entornos de desarrollo</h1>
+<p>Una vez se ha descrito el proceso general para desarrollar y llegar a ejecutar un programa, se hace evidente que hay que tener instalados y correctamente configurados dos programas completamente diferentes e independientes en vuestro ordenador para desarrollarlos: editor, por un lado, y compilador (incluyendo el enlazador) o intérprete por otro, según el tipo de lenguaje. Cada vez que queréis modificar y probar vuestro programa tendréis que ir alternando ejecuciones entre los dos. Realmente, sería mucho más cómodo si todo ello se pudiera hacer desde un único programa, que integrara los tres. Un editor avanzado desde el cual se pueda compilar, enlazar si se tercia, e iniciar la ejecución de código fuente para comprobar si funciona.</p>
+<p>Un <strong>IDE</strong> (integrated development environment o entorno integrado de desarrollo) es una herramienta que integra todo lo que hace falta para generar programas de ordenador, de forma que el trabajo sea mucho más cómodo.</p>
+<p>La utilización de estas herramientas agiliza increíblemente el trabajo del programador. Además, los IDE más modernos van más allá de integrar editor, compilador y enlazador o intérprete, y aportan otras características que hacen todavía más eficiente la tarea de programar. Por ejemplo:</p>
+<ul>
+<li>Posibilidad de hacer resaltar con códigos de colores los diferentes tipos de instrucciones o aspectos relevantes de la sintaxis del lenguaje soportado, para facilitar la comprensión del código fuente.</li>
+<li>Acceso a documentación y ayuda contextual sobre las instrucciones y sintaxis de los lenguajes soportados.</li>
+<li>Detección, y en algunos casos incluso corrección, automática de errores de sintaxis en el código, de manera similar a un procesador de texto. Así, no hay que compilar para saber que el programa está mal.</li>
+<li>Apoyo simultáneo del desarrollo de lenguajes de programación diferentes.</li>
+<li>Un depurador, una herramienta muy útil que permite pausar la ejecución del programa en cualquier momento o hacer la ejecución instrucción por instrucción, de forma que permite analizar como funciona el programa y detectar errores.</li>
+<li>En los más avanzados, sistemas de ayuda para la creación de interfaces gráficas.</li>
+</ul>
+<p>En definitiva, usar un IDE para desarrollar programas es una opción muy recomendable. Aun así, hay que tener presente que son programas más complejos que un simple editor de texto y, como pasaría con cualquier otro programa, hay que dedicar un cierto tiempo a familiarizarse con estos y con las opciones de que disponen.</p>
+<h2 id="jdk">JDK</h2>
+<p>El Java Development Kit proporciona el conjunto de herramientas básico para el desarrollo de aplicaciones con Java estándar. Se puede obtener de manera gratuita en la Web de Oracle, descargándolo desde la dirección:</p>
+<p><a href="https://www.oracle.com/es/java/technologies/javase-downloads.html">https://www.oracle.com/es/java/technologies/javase-downloads.html</a></p>
+<p>Descarga la versión correspondiente según tu sistema operativo.</p>
+<p>Para el caso de los ordenadores del aula, tenemos instalado Debian y, por tanto, se debe descargar la versión: Linux x64 Debian Package.</p>
+<h2 id="eclipse">Eclipse</h2>
+<p>Eclipse es un programa informático compuesto por un conjunto de herramientas de programación de código abierto multiplataforma para desarrollar aplicaciones. Esta plataforma, fundamentalmente ha sido utilizada para desarrollar entornos de desarrollo integrados (IDE), como el de Java. Sin embargo, también se puede usar para otros tipos de aplicaciones cliente, como BitTorrent o Azureus.</p>
+<p>La definición que da Eclipse acerca de su software es: “una especie de herramienta universal – un IDE abierto y extensible para todo y nada en particular”.</p>
+<h3 id="instalacion">Instalación</h3>
+<p>Para la descarga de Eclipse accederemos a la página oficial <a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/download</a></p>
+<p>Descargaremos Eclipse IDE 2025-06. Normalmente, se detecta automáticamente el sistema operativo, si no es así ves a Download Packages y en la nueva ventana aparecerá la descarga para Linux.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
