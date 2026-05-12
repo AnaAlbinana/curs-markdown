@@ -1,4 +1,6 @@
 site_name: UT01
+docs_dir: md
+site_dir: docs
 theme: 
   name: material
   favicon: assets/imatges/favicon.ico
