@@ -1,1 +1,18 @@
-site_name: My Docs
+site_name: UT01
+theme: 
+  name: material
+  favicon: assets/imatges/favicon.ico
+nav:
+  - Inicio: index.md
+  - 1. Introducción: introduccion.md
+  - 2. Órdenes: ordenes.md
+  - 3. Programas: 
+    - 3.1. Introducción: programas.md
+    - 3.2. Análisis: analisis.md
+    - 3.3. Diseño: disenyo.md
+    - 3.4. Implementación: implementacion.md
+    - 3.5. Explotación: explotacion.md
+  - 4. Paradigmas: paradigmas.md
+  - 5. IDE: ide.md
+extra_css:
+  - assets/css/extra.css
